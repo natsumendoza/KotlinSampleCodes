@@ -20,6 +20,13 @@ fun main(args: Array<String>) {
         println("No Number supplied!")
     } else {
         val x = parseInt(args[0])
+        val y = parseInt(args[1])
 
+        // We cannot say 'x * y' now because they may hold nulls
+        if (x != null && y != null) {
+            print(x * y) // Now we can
+        } else {
+            println("One of the arguments is null")
+        }
     }
 }
